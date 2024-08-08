@@ -1,0 +1,8 @@
+<h1>Websocket Sample</h1>
+<button (click)="handleClick()">Send Message</button>
+<p>Messages:</p>
+<ul>
+  @for (message of messages$ | async; track $index) {
+    <li>{{ message | json }}</li>
+  }
+</ul>
